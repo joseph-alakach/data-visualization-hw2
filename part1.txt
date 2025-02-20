@@ -1,0 +1,34 @@
+Part1:
+
+1- the left(minimum) whisker is defined as Q1-1.5(IQR) and the right(maximum) as Q3+1.5(IQR)
+in this case if the the data is not close to the normal distribution then the range of the IQR (which is the half of the data) could be very big and thus the whiskers could be close to Q1 and Q3
+
+2- the boxplot in this case could count outliers as actual data, to fix this issue we could take the log of the data
+
+
+3- we calculate the median or the average of some data to have a somewhat representation of that data with 1 number, but the problem with the average is that when the data has outliers then the average will be affected because of the outlier and thus will be closer to the outlier even though the actual data is not that close to the outlier, thus we can use the median which is not affected by the outlier, boxplot uses the median for the same reason, it could obscure the data characteristics when the density is of the data is not normal for example the data could have multiple density points but because we are taking the median we only will see one density concentration as if the data is normal distributed.
+
+
+4- strong skewness on the right tail means that the data has quite big outliers on the right of the data, it would have a big variance as the variance is affected by the outliers in the data, skewness coefficient will be greater than 0 as the data is skewed to the right
+
+
+5- when we have data with with high dimensions categorical data the boxplot is good in visualizing the boxplots for each category and lets you see the different types in the category side by side, so its good in visualizing multiple groups in the same graph, however when we have overlapping data in the graph there could be having overlapping medians and quartiles thus it would be hard to see them, also when the data size is small (smaller than 6) then the quartiles and the whiskers could be meaningless.
+
+
+6- if we choose a small number of bins for the histogram for example 3 bins for the whole data then we won't be able to see the data distribution of the data, all the data would be compressed to 3 bins which will not show the true distribution   
+
+
+7- both bar charts and histograms show frequencies in the data, the difference with histograms is that it can be used for non discrete or non categorical values which bar charts cant, bins are irrelevant in bar charts because each rectangle in the bar chart is only 1 category or discrete value from the data no need to group values in a certain way.
+
+
+8- using small number of beans could lead to plotting a graph of the data that does not show the true underlying distribution of the data, KDE can be better if we are focusing on the distribution of the data because it is smoother than the histogram. so in histograms if you realize that you need to set a big number of bins to see the distribution better you might as well go ahead with using KDE instead.
+
+
+9- in histograms the density is represented by grouping data points and counting the frequency of that group, on the other hand density plot represent the density of the data using probability of the data points occurring, using different bandwidth could be a challenge because if you choose small bandwidth then you will see too much noise in the graph and when choosing big bandwidth then you loose information, so you have to find the balance in choosing the bandwidth
+
+
+10- because density plots are made using probability calculation using the current data, so in sense density plots shows what is the probability that a certain data point will be in certain region, so if we consider probability of a certain data points from the data being in not only a small region in the plot but in the entire plot it will be 1 because it will be 100% for sure somewhere in the density plot it is from the data. distributions with different size have also area equal to 1 becuase the area under the curve is always the maximum probability which is 1.
+
+
+
+
